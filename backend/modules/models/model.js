@@ -64,8 +64,8 @@ class ModelFactory{
     getMessage(sequelize){
         const Message = sequelize.define('Message',
             {
-                likes: {
-                    type: DataTypes.INTEGER
+                text: {
+                    type: DataTypes.STRING
                 },
                 send_date: {
                     type: DataTypes.DATE
@@ -82,7 +82,9 @@ class ModelFactory{
     getFollowers(sequelize){
         const Follower = sequelize.define('Follower',
             {
-
+                creation_date: {
+                    type: DataTypes.DATEONLY
+                },
             });
         return Follower;
 

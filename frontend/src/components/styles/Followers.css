@@ -1,0 +1,15 @@
+
+
+.followers-list {
+    background-color: #8B4513; 
+    padding: 10px; 
+    border-radius: 8px; 
+}
+
+.followers-list-item {
+    margin-top: 10px;
+    color: #FFF8DC;
+    font-size: 1em;
+    display: block;
+    width: 100%;
+}

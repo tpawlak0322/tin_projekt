@@ -1,0 +1,84 @@
+
+
+.thread-container {
+    background-color: #8B4513;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.message-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message-item {
+    width: 100%; 
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center; 
+}
+
+.message-item button,
+.message-item input {
+    width: 80%; 
+}
+
+.message-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.send-message-button {
+    background-color: #D2691E;
+    border: none;
+    color: #FFF8DC;
+    font-size: 1em;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.send-message-button:hover {
+    background-color: #A0522D;
+}
+
+.edit-message-container {
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-message-input {
+    flex: 1;
+    margin-right: 10px;
+    width: 80%; 
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.pagination button {
+    background-color: #D2691E;
+    border: none;
+    color: #FFF8DC;
+    font-size: 1em;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.pagination button.active {
+    background-color: #A0522D;
+}

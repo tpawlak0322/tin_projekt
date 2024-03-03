@@ -1,0 +1,52 @@
+
+.admin-threads-container {
+    background-color: #8B4513;
+    padding: 20px; 
+    border-radius: 8px; 
+    max-width: 600px; 
+    margin: 50px auto; 
+    text-align: left; 
+}
+
+h2 {
+    background-color: #D2691E;
+    border: none;
+    color: #FFF8DC;
+    font-size: 1.2em;
+    padding: 10px 20px; 
+    margin-top: 10px;
+    cursor: pointer;
+    display: block; 
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+strong {
+    color: #FFF8DC; 
+    margin-right: 5px;
+}
+
+button {
+    background-color: #D2691E;
+    border: none;
+    color: #FFF8DC;
+    font-size: 1em;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #A0522D; 
+}
+
+.link-button {
+    text-decoration: none;
+}

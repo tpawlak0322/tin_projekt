@@ -2,6 +2,7 @@ const config = require("./config");
 const {ModelFactory} = require("../models/model");
 const { Sequelize } = require('sequelize');
 const e = require("express");
+const bcrypt = require("bcrypt");
 
 const sequelize = new Sequelize(config.development);
 const User = new ModelFactory().getUser(sequelize)
@@ -26,20 +27,15 @@ function db_init()
     const add_seed = async ()=> {
 
         try {
-            const newUser = await User.create({
-                username: 'testowy uzytkownik',
-                password: 'testowe haslo',
-                token: 'tetetete',
-                refresh_token: 'teeeest',
-                role: 'user',
+            const password = 'admin'
+            const hashedPassword = await bcrypt.hash(password, 10);
+
+            const newAdmin = await User.create({
+                username: 'admin',
+                password: hashedPassword,
+                role: 'admin',
             });
-            const newUser2 = await User.create({
-                username: 'testowy uzytkownikfollowujacy',
-                password: 'testowe haslo',
-                token: 'tetetete',
-                refresh_token: 'teeeest',
-                role: 'user',
-            });
+
             const newThread = await Thread.create({
                 creation_date: Date.now(),
                 last_visit_date: Date.now(),
@@ -48,17 +44,14 @@ function db_init()
                 creation_date: Date.now(),
                 last_visit_date: Date.now(),
             })
-            newThread.setUser(newUser);
-            newThread2.setUser(newUser2);
-            newUser.addFollowerUser(newUser2);
+            newThread.setUser(newAdmin);
         } catch (exception) {
             console.error(exception)
         }
     }
 
 
-    // Synchronize the models with the database
-    sequelize.sync({force: true}) // Use { force: true } only during development to recreate tables
+    sequelize.sync({force: false})
         .then(() => {
             console.log('Database and tables synced successfully.');
         })
@@ -69,4 +62,4 @@ function db_init()
 
 
 }
-module.exports = {db_init,User,Thread,Follower,Message}
+module.exports = {db_init,User,Thread,Follower,Message,sequelize}

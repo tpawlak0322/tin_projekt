@@ -1,0 +1,42 @@
+.manage-accounts-container {
+    background-color: #D2B48C;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.manage-accounts-list {
+    list-style: none;
+    padding: 0;
+}
+
+.manage-accounts-item {
+    background-color: #A0522D;
+    border: 1px solid #8B4513;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.manage-accounts-item span {
+    margin-right: 10px;
+    color: #FFF8DC;
+}
+
+.delete-button {
+    background-color: #8B4513;
+    border: none;
+    color: #FFFFFF;
+    font-size: 0.8em;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-button:hover {
+    background-color: #ff3b3b;
+}

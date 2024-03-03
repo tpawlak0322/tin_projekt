@@ -1,0 +1,49 @@
+
+body {
+    background-color: #9a7e59; 
+    margin: 0; 
+}
+
+.homepage-container h2, h1 {
+    background-color: #c96230;
+    border: none;
+    color: #FFF8DC;
+    font-size: 1.2em;
+    padding: 10px 20px; 
+    margin-top: 10px;
+    cursor: pointer;
+    display: block; 
+}
+
+.homepage-container {
+    background-color: #8B4513; 
+    padding: 20px; 
+    border-radius: 8px; 
+    max-width: 600px; 
+    margin: 50px auto; 
+    text-align: center; 
+}
+
+
+
+button {
+    background-color: #D2691E;
+    border: none;
+    color: #FFF8DC;
+    font-size: 1.2em;
+    padding: 10px 20px; 
+    margin-top: 10px;
+    cursor: pointer;
+    display: inline-block; 
+    border-radius: 8px; 
+    width: 80%; 
+}
+
+button:hover {
+    background-color: #A0522D; 
+}
+
+.guest-text {
+    color: #FFF8DC; 
+    margin-top: 10px;
+}
